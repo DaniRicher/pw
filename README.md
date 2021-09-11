@@ -1,1 +1,1 @@
-niel Richerson Alvarado Amais - 2017114144
+Daniel Richerson Alvarado Amais - 2017114144
