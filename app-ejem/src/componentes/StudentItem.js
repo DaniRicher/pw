@@ -5,6 +5,10 @@ import Button from 'react-bootstrap/Button'
 import '../css/misestilos.css'
 const StudenItem = (props)=>{
     const{nombre,programa,Semestre}=props.students;
+    const controlarClic=(ev)=>{
+        ev.preventDefault();
+        console.log('Se invoco la funcion al dar clic')
+    }
     return(
         <div className="item">
         <Row>
@@ -17,8 +21,7 @@ const StudenItem = (props)=>{
                 <p className="text-muted">{Semestre}</p>
                 </Col>
                 <Col md={3} sm={3}>
-                <Button variant="primary" size="sm" onClick={props.funcion(nombre)
-                    }>Ver detalles </Button>
+                <Button variant="primary" size="sm" onClick={ev=>props.funcion(nombre)}>Ver detalles </Button>
                 </Col>
         </Row>
         </div>  

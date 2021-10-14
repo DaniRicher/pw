@@ -19,9 +19,7 @@ const StudenList = ()=>{
         <Row className="border">
             <Col>
             {students.map(s =>(
-            <>
-                <StudenItem students={s} funcion={tuNombreFuncion}/>
-            </>
+                <StudenItem key ={s.id} students={s} gato={tuNombreFuncion}/>
             ))
         }
         </Col>
