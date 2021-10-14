@@ -3,13 +3,17 @@ import './App.css';
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
 import StudenList from './componentes/StudenList';
+import Container from 'react-bootstrap/Container'
+
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <StudenList/>
-      <Footer/>
-    </div>
+    <Container fluid>
+      
+        <Header/>
+        <StudenList/>
+        <Footer/>
+
+    </Container>
   );
 }
 

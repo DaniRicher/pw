@@ -1,10 +1,14 @@
 import React from "react";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
-const Footer =(propiedades)=>{
+const Footer =()=>{
     return (
-        <footer>
-            Pie de página
-        </footer>
+        <Row className="border">
+            <Col>
+                <p>Copyright</p>
+            </Col>
+        </Row>
     );
 }
 
