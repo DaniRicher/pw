@@ -21,7 +21,7 @@ const StudenItem = (props)=>{
                 <p className="text-muted">{Semestre}</p>
                 </Col>
                 <Col md={3} sm={3}>
-                <Button variant="primary" size="sm" onClick={ev=>props.funcion(nombre)}>Ver detalles </Button>
+                <Button variant="primary" size="sm" onClick={ev=>props.f(nombre)}>Ver detalles </Button>
                 </Col>
         </Row>
         </div>  
