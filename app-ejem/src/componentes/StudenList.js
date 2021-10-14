@@ -12,12 +12,15 @@ const StudenList = ()=>{
     {id:5,nombre:'Angie',programa:'Ing. de sistemas', Semestre: 5},
     {id:6,nombre:'Luz',programa:'Ing. de sistemas', Semestre: 5}
 ]
+    const tuNombreFuncion = (nombre) =>{
+        console.log(nombre);
+    }
     return(
         <Row className="border">
             <Col>
             {students.map(s =>(
             <>
-                <StudenItem students={s}/>
+                <StudenItem students={s} funcion={tuNombreFuncion}/>
             </>
             ))
         }

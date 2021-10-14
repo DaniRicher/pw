@@ -17,7 +17,8 @@ const StudenItem = (props)=>{
                 <p className="text-muted">{Semestre}</p>
                 </Col>
                 <Col md={3} sm={3}>
-                <Button variant="primary" size="sm">Ver detalles </Button>
+                <Button variant="primary" size="sm" onClick={props.funcion(nombre)
+                    }>Ver detalles </Button>
                 </Col>
         </Row>
         </div>  
