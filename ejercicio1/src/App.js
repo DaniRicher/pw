@@ -1,15 +1,19 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Container from 'react-bootstrap/Container';
+import {BrowserRouter as Router} from 'react-router-dom'
+import MisRoutes from './MisRutas';
 import Header from './componentes/Header';
-import Productos from './componentes/Productos'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Productos/>
-      
-    </div>
+    <Container fluid>
+      <Router>
+        <Header/>
+         <MisRoutes/>
+      </Router>
+    </Container>
   );
 }
 

@@ -13,7 +13,7 @@ const ProductItem=(props)=>{
             </Row>
             <Row>
                 <Col className="text-start">
-                    <h6>{Precio}</h6>
+                    <h6>${Precio}</h6>
                 </Col>
             </Row>
             <Row>
