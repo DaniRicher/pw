@@ -15,6 +15,8 @@ const Header =()=>{
                 <Link to='/Cart'> Cart
                    <i className="bi bi-cart-dash"></i>
                 </Link>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <Link to='/Add'> Add</Link>
             </Col>
         </Row>
     );
