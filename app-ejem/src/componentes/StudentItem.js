@@ -1,19 +1,16 @@
-import react from "react"
+import React from "react"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import '../css/misestilos.css'
 const StudenItem = (props)=>{
     const{nombre,programa,Semestre}=props.students;
-    const controlarClic=(ev)=>{
-        ev.preventDefault();
-        console.log('Se invoco la funcion al dar clic')
-    }
+    
     return(
         <div className="item">
         <Row>
             <Col md={1} sm={1}>
-                <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" className="avatar"/>
+                <img alt =''src="https://cdn-icons-png.flaticon.com/512/147/147144.png" className="avatar"/>
             </Col>
             <Col md={8} sm={8}>
                 <h5>{nombre}</h5>

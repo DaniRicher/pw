@@ -1,27 +1,47 @@
+import {Row,Col} from 'react-bootstrap'
+import React, { useState } from 'react';
+//import GridProduct from '../componentes/GridProduct';
 
-//import React, {useState} from 'react'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import React, {useState} from 'react';
-//import GridProduct from "../componentes/GridProduct"
 
-export default function Add(){
-    const nameInicial='nombre1';
-    const [nombrevariable, nombremodificado]= useState (nameInicial);
+export default function Add(props){
+    const estadoinicialform = {
+        nombre:'',
+        Precio:''
+    };
 
-    const accionEscribir = (e) =>{
-        let valor = e.target.value;
-        nombremodificado(valor);
+    const [estadoForm,cambiarestadoForm]= useState(estadoinicialform);
+
+    const gestionarCampForms= event=>{
+        //const nameInput = event.target.nombre;
+        //const valueInput = event.targe.value;
+        const {name, value}= event.target;
+        cambiarestadoForm({...estadoForm,[name]:value});
+    }
+    const onSubmitForm=ev =>{
+
+        ev.preventDefault();
+        console.log(estadoForm)
+        props.agregar(estadoForm);
+        cambiarestadoForm(estadoinicialform);
     }
     return(
         <Row>
-            <Col className="col py5 text-center border">
-                <h1>Agregar</h1>
-                <h1>Nombre: {nombrevariable}</h1>
-                <span>Modificar nombre</span>
-                <input value={nombrevariable} 
-                onChange={accionEscribir} />
+            <Col className="col py5 text-center">
+                <h1>Agregar productos</h1>
             </Col>
+            <form onSubmit={onSubmitForm}>
+            <div className="mb-3">
+                <label htmlFor="nombre" className="form-label">Nombre:</label>
+                <input type="text" name="nombre"className="form-control" id="nombreproduct" placeholder="Nombre"value={estadoForm.nombre} onChange={gestionarCampForms}/>
+            </div>
+            <div className="mb-3">
+                <label htmlFor="Precio" className="form-label">Precio:</label>
+                <input type="text" name="Precio"className="form-control" id="PrecioProduc" placeholder="Precio"value={estadoForm.Precio} onChange={gestionarCampForms}/>
+            </div>
+            <div className="col-12">
+                <button type="submit" className="btn btn-primary">Agregar</button>
+            </div>
+        </form>
         </Row>
     );
 }

@@ -2,11 +2,12 @@ import React from 'react'
 import {Col, Row} from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 
+
 const ProductItem=(props)=>{
-    const{nombre, Precio}=props.producto
+    const{nombre, Precio}=props.producto;
     return(
         <div className="item">
-            <Row className="">
+            <Row>
                 <Col className="text-start">
                 <span>{nombre}</span>
                 </Col>
