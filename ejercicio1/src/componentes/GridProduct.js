@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import { Col, Row } from 'react-bootstrap';
 import Add from '../rutas/Add';
 import ProductItem from './ProductItem';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Table,Button,Container,Modal,ModalBody,ModalHeader,FormGroup,ModalFooter } from 'react-bootstrap';
 
 
 const GridProduct=()=>{
@@ -27,9 +29,9 @@ const GridProduct=()=>{
     
     return(
         <>
-        <Row>
+        {/*<Row>
             <Add agregar={alEnviarForm}/>
-        </Row>
+        </Row>*/}
 
         <Row className="border">
             {items.map(s =>(
